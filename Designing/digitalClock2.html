@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+        }
+        h1{
+            font-size: 120px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body onload=" myclock();">
+    <h1 id="timer"></h1>
+</body>
+<script>
+
+    function myclock(){
+        
+        let timer = document.querySelector("#timer");
+
+            
+      
+        let date = new Date();
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let ss = date.getSeconds();
+        let ampm = "AM"
+
+        if(ss<10){
+            ss="0"+ss;
+        }
+        if(mm<10){
+            mm="0"+mm;
+        }
+        
+        if(hh>12){
+            hh=hh-12
+            ampm="PM"
+            
+        }
+        if(hh<10){
+                hh="0"+hh
+            }
+       
+
+        
+        var clock = `${hh} : ${mm} : ${ss} : ${ampm} `;
+        timer.innerText=clock
+
+    }
+
+    setInterval(myclock,1000);
+   
+  
+
+
+    // var months = [
+    //     "jan","feb","march","april","may","june","july","august","sept","oct"
+    // ]
+    // var date = new Date();
+   
+    // console.log( date.getSeconds()) // 24
+
+
+
+    var arr = [10,20,30,40,50,60];
+
+    var newarr = arr.reduce(function(acc,cur){
+        return v*2;
+    })
+
+    console.log(newarr)
+</script>
+</html>
