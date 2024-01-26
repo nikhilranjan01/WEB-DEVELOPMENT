@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;flex-direction: column;
+            position: relative;
+           transition: 1s;
+
+        }
+        #box{
+            width: 500px;
+            height: 400px;
+            background-color: red;
+            position: absolute;
+           transition: 1s;
+            top:-80%;
+        }
+        button{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        span{
+            font-size: 65px;
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <span onclick="closeBtn()">&times;</span>
+    </div>
+    <button onclick="changeColor()">change</button>
+</body>
+<script>
+    let box = document.getElementById("box")
+    function changeColor(){
+        console.log(box.style.cssText="top:50%;  transform: translateY(-50%);")
+        console.log(document.getElementsByTagName("body")[0].style.cssText="background-color:black;")
+        document.getElementsByTagName("button")[0].style.display="none";
+    }
+    function closeBtn(){
+        document.getElementsByTagName("button")[0].style.display="block";
+        console.log(document.getElementsByTagName("body")[0].style.cssText="background-color:white;")
+        console.log(box.style.cssText="top:-80%;")
+
+    }
+</script>
+</html>
