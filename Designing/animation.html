@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+          
+        }
+        .main{
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color:blue;
+            animation-name: color;
+            animation-duration: 5s;
+            position: absolute;
+            animation-delay:2s ;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: linear;
+        }
+        .box:nth-child(1){
+            left: 0;
+            top: 0;
+            animation-name:  box1;
+            animation-duration: 1s;
+
+        }
+
+        @keyframes box1{
+            0%{
+                left: 0;
+            }
+            100%{
+                left: 80%;
+            }
+        }
+
+
+        .box:nth-child(2){
+            background-color: blue;
+            top: 0;
+            right: 0;
+            animation-name:  box2;
+            animation-duration: 1s;
+        }
+        @keyframes box2{
+            0%{
+                top: 0;
+            }
+            100%{
+                top: 80%;
+            }
+        }
+        .box:nth-child(3){
+            background-color:greenyellow;
+            bottom: 0;
+            right: 0;
+            animation-name:  box3;
+            animation-duration: 1s;
+        }
+        @keyframes box3{
+            0%{
+                right: 0;
+            }
+            100%{
+                right: 80%;
+            }
+        }
+        .box:nth-child(4){
+            background-color: green;
+            left: 0;
+            bottom: 0;
+            animation-name:  box4;
+            animation-duration: 1s;
+        }
+        @keyframes box4{
+            0%{
+                bottom: 0;
+            }
+            100%{
+                bottom: 80%;
+            }
+        }
+        
+.footer{
+    width: 100%;
+    /* background-color: red; */
+    height:250px;
+    position: absolute;
+    bottom: 0;
+    background-color:aqua;
+    overflow: hidden;
+}
+.truck{
+    position: absolute;
+   /* top: -20px; */
+    left: 0;
+    
+    animation: truck 5s infinite linear;
+
+}
+@keyframes truck {
+        0%{
+            left: 0;
+        }
+        100%{
+            left: 120%;
+        }
+}
+.wheels{
+    display: flex;
+}
+
+.w1 img{
+    position: absolute;
+    left: 15px;
+    animation: wheel1 2s infinite linear;
+}
+.w1:nth-child(2) img{
+    position: absolute;
+    left: 55px;
+    animation: wheel1 2s infinite linear;
+
+}
+@keyframes wheel1{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+
+    <div class="footer">
+        <div class="truck">
+            <img src="./truck-1.png" alt="" >
+            <div class="wheels">
+                <div class="w1">
+                    <img src="./wheel-2 (1).png" alt="" >
+                </div>
+                <div class="w1"><img src="./wheel-2 (1).png" alt="" ></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
