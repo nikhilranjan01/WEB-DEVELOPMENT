@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function generateFibonacci(n) {
+  const fibonacciSequence = [0, 1];
+
+  for (let i = 2; i < n; i++) {
+    const nextValue = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+    fibonacciSequence.push(nextValue);
+  }
+
+  return fibonacciSequence;
+}
+
+
+
+const numberOfTerms = parseInt(prompt("enter number"));
+const fibonacciSequence = generateFibonacci(numberOfTerms);
+document.write(fibonacciSequence);
+
+</script>
+</html>
