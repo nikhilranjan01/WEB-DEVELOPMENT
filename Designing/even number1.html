@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <script>
-         let number=parseInt(prompt("Enter Number"))
-       
-           if(number%2==0){
-               document.write("Even")
-           }
-           else{
-               document.write("Odd")
-           }
-           
-   </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Even Numbers with Colorful Background</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .even {
+      padding: 20px;
+      font-size: 24px;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    
+  <div id="number" class="even"></div>
+
+  <script>
+    function generateRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function setBackground(color) {
+      document.body.style.backgroundColor = color;
+    }
+
+    function generateEvenNumber() {
+      var randomNumber = Math.floor(Math.random() * 100) + 1; // Generate random number between 1 and 100
+      if (randomNumber % 2 !== 0) { // If it's not even, call the function again
+        generateEvenNumber();
+      } else {
+        var numberElement = document.getElementById('number');
+        numberElement.innerHTML = randomNumber;
+        var randomColor = generateRandomColor();
+        numberElement.style.backgroundColor = randomColor;
+        setBackground(randomColor);
+      }
+    }
+
+    generateEvenNumber();
+  </script>
 </body>
 </html>
-
