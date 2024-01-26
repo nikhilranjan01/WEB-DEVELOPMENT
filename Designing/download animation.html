@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+          
+            flex-direction: column;
+            align-items: center;
+        }
+        .main{
+            width: 100%;
+            height: 80px;
+            background-color: gray;
+        }
+        .download{
+            width: 15px;
+            background-color: rgb(14, 201, 14);
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+  <!-- <button onclick="setData()">Start</button>
+<button onclick="stopping()">stop</button>
+
+<h1 id="res"></h1> -->
+<div class="main">
+    <div class="download" id="dow"></div>
+</div>
+<div class="btns">
+    <button id="start">Donwload</button>
+
+   
+</div>
+
+</body>
+<script>
+let counter = document.querySelector("#res");
+let start = document.querySelector("#start");
+let stop = document.querySelector("#stop");
+let dow = document.querySelector("#dow");
+
+    var interval;
+start.addEventListener("click",function(){
+        var width=0;
+        interval=setInterval(()=>{
+        if(width>100){
+            clearInterval(interval)
+        }
+        else{
+        dow.style.width=width+"%";
+        dow.innerText=width+"%";
+        width++;
+        }
+    },100)
+})
+
+
+
+    // let h= document.querySelector("#res");
+    // let data;
+//    function setData(){
+//          data =setTimeout(function(){
+//                    h.innerText="hello this is time out function";
+//            },3000)
+
+//    }
+//    function stopping(){
+//     clearTimeout(data)  
+//    }
+    
+</script>
+</html>
