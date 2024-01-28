@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            resize: none;
+        }
+        .row{
+            display: flex;
+        }
+        input[type='text'],input[type='email']{
+            width: 500px;
+            height: 50px;
+            background-color: peru;
+            border-radius: 15px;
+            border: 1px solid black;
+            margin: 10px 0;
+            padding: 5px 10px;
+            font-size: 25px;
+            color: white;
+            text-shadow: 2px 2px 3px   black;
+            box-shadow: 5px 5px 0px 0.5px black;
+        }
+        input::placeholder{
+            color: white;
+            font-size: 25px;
+            
+        }
+    </style>
+</head>
+<body>
+    <form>
+        Name :
+        <input type="text" placeholder="Enter Your First Name" required><br/>
+        Email :
+        <input type="email"  required placeholder="Enter Your Email"><br/>
+        password :
+        <input type="password"   maxlength="8"><br/>
+        image upload :
+        <input type="file"><br/>
+        Gender : <input type="radio" name="gender" > Male 
+                <input type="radio" name="gender"> Female <br/>
+        Skills:
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> Js
+        <input type="checkbox"> Jquery
+        <input type="checkbox"> Bootstrap<br/>
+
+        Country :
+        <select>
+            <option>India</option>
+            <option>America</option>
+            <option>Bali</option>
+            <option>Pakisthan</option>
+        </select><br/>
+        <div class="row">
+            <div class="heading">Address:</div>
+        <textarea name="" id="" cols="15" rows="5" readonly>
+            This is Textarea   
+        </textarea>
+        <div class="inputs"></div>
+        </div>
+        <input type="color">
+        <input type="date">
+        <input type="month">
+        <input type="week">
+        <input type="number" min="1" max="10">
+        <input type="search" autofocus>
+
+
+        <input type="submit">
+        <input type="button">
+        <input type="reset">
+
+        
+
+    </form>
+</body>
+</html>
