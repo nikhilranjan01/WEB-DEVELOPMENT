@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            /* margin: auto; */
+            /* background-color: red; */
+            padding: 20px;
+            background-color: red;
+            position: sticky;
+                transition-duration: 3s;
+                margin-bottom: 5px;
+                transition-timing-function: ease-in;
+                
+            
+        }
+        .main2{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            /* margin: auto; */
+            /* background-color: red; */
+            padding: 20px;
+            background-color: red;
+            margin-bottom: 5px;
+
+            position: sticky;
+            transition-duration: 3s;
+            transition-timing-function: ease-out;
+            
+            
+        }
+        .main3{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            /* margin: auto; */
+            /* background-color: red; */
+            padding: 20px;
+            background-color: red;
+            position: sticky;
+            transition-duration: 3s;
+            margin-bottom: 5px;
+            transition-timing-function: ease-in-out;
+            
+            
+        }
+        .main4{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            /* margin: auto; */
+            /* background-color: red; */
+            padding: 20px;
+            background-color: red;
+            position: sticky;
+           transition: 2s  linear;
+            
+            
+        }
+        
+        .mainbox{
+            width: 1000px;
+            height: 1000px;
+        border: 10px solid black;
+        
+        
+       }
+       .mainbox:hover .main,.mainbox:hover .main2,.mainbox:hover .main3,.mainbox:hover .main4{
+
+        background-color: aqua;
+        transform: translateX(790px);
+       }
+      
+    </style>
+</head>
+<body>  
+   
+    <div class="mainbox">
+        
+        <div class="main">
+            NIKHIL RANJAN
+        </div>
+        <div class="main2">
+            NIKHIL SINGH
+        </div>
+        <div class="main3">
+            NIKHIL
+        </div>
+        <div class="main4">
+            RANJAN
+        </div>
+    </div>
+       
+</body>
+</html>
