@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Remove Membership</button>
+</body>
+<script>
+    let btns = document.querySelector("#btn");
+
+    btns.addEventListener("click",function(e){
+        var count=3
+        var inter;
+        inter=setInterval(() => {
+            if(count<0){
+                clearInterval(inter)
+        if(confirm("Remove member ship")){
+            alert("Your membership removed successfully")
+            console.log(e.target.disabled=false)
+        e.target.innerText="Exit"
+        }
+        else{
+            alert("Not Removed");
+            console.log(e.target.disabled=false)
+        e.target.innerText="Rempove Membership"
+        }
+       
+
+            }
+            else{
+                e.target.innerText="Wait for "+count
+                count--;
+
+            }
+        }, 1000);
+        console.log(e.target.disabled=true)
+    })
+</script>
+</html>
