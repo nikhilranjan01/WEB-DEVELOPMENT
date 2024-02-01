@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;flex-direction: column;
+            position: relative;
+           transition: 1s;
+
+        }
+        .box{
+            width: 500px;
+            height: 400px;
+        
+            border: 10px solid red;
+           transition: 3s;
+            
+        }
+       .change{
+        
+        border: 5px solid black;
+        border-radius: 20px;
+        background: aqua;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="box ">
+    
+    </div>
+
+    <button onclick="toggleclass()">CHANGE</button>
+    <!-- <button onclick="removeClass()">remove</button> -->
+
+</body>
+<script>
+    let box = document.getElementsByClassName("box")[0]
+
+    function toggleclass(){
+      console.log(box.classList.toggle("change"))
+    }
+ 
+   
+   
+</script>
+</html>
