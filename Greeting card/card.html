@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+    <div class="box1">
+        <form action="">
+            <h4>to:</h4>
+            <input type="text" id="cont" onkeyup="getString()">
+            <h4>from:</h4>
+            <input type="text" id="cont" onkeyup="getString()">
+            <h4>message:</h4>
+            <textarea name="" id="cont" cols="30" rows="10" onkeyup="getString()" ></textarea>
+
+            <h4>font family </h4>
+            <select name="" id="fonts" onchange="fontFamily(this)">
+                <option value="Arial">Arial</option>
+                <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                <option value="Segoe UI">Segoe UI</option>
+                <option value="monospace">monospace</option>
+
+            </select>
+            <h4>Text color</h4>
+            <input type="color" id="col"  onchange="Color(this)">
+            <h4>background images</h4>
+            <img src="./87370.jpg" alt="" width="80px" height="80px" class="img1" onclick="image(this)">
+            <img src="./62976.jpg" alt="" width="80px" height="80px"  onclick="image(this)"  >
+            <img src="./62987.jpg" alt="" width="80px" height="80px" onclick="image(this)" >
+        
+        </form>
+    </div>
+    <div class="box2" id="parent">
+        <h1 class="setheadings">hello</h1>
+        <h3 class="setheadings">message</h3>
+        <h2 class="setheadings">form</h2>
+
+    </div>
+
+</body>
+<script>
+
+    const content=document.querySelectorAll("#cont");
+    const box2=document.querySelector(".box2");
+    const textContent=document.querySelectorAll(".setheadings");
+    function getString(){
+    textContent[0].innerText=content[0].value;
+    textContent[1].innerText=content[2].value;
+    textContent[2].innerText=content[1].value;
+    }
+
+    function fontFamily(e){
+        console.log(box2.style.fontFamily=e.value)
+    }
+    function Color(e){
+        console.log(box2.style.color=e.value)
+    }
+    function image(e){
+        console.log(box2.style.backgroundImage=`url(${e.src})`)
+    }
+//   var con=document.querySelectorAll("#cont");
+//   var show=document.getElementsByClassName("setheadings")
+//   var par=document.getElementById("parent");
+//   console.log(show)
+
+//     function content(){
+//         console.log(show[0].innerText=con[0].value)
+//         console.log(show[2].innerText=con[1].value)
+//         console.log(show[1].innerText=con[2].value)
+
+//     }
+//     function fontchange(e){
+//         console.log(par.style.fontFamily=e.value)
+//     }
+//     function colorchange(e){
+//         console.log(par.style.color=e.value)
+//     }
+//     function changeimg(a){
+//         // document.getElementsByClassName()
+//         console.log(par.style.backgroundImage=`url(${a.src})`)
+//     }
+</script>
+
+</html>
