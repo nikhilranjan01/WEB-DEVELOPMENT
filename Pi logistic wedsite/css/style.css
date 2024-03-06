@@ -1,0 +1,90 @@
+.logo{
+    width: 25vw;
+}
+.card-inner-01{
+    height: 40vw;
+    background-image: url(../image/slider-bg.jpg);
+    padding-left: 8vw;
+}
+.card-inner-02{
+    height: 40vw;
+    /* background-image: url(../image/); */
+}
+.card-inner-01 span
+{
+    text-decoration: underline;
+}
+.card-inner-01 h2{
+    color:#FAA61A;
+    font-size: 3.5vw;
+    line-height: 40px;
+}
+.card-inner-01 p{
+    color: white;
+    font-size: 1.5vw;
+    padding-top: 30px;
+    font-weight: bold;
+    line-height: 35px;
+
+}
+.aeo-image{
+    max-width: 170px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+/* .card-inner-01:hover{
+    background: white !important
+
+} */
+.card-inner-02{
+    height: 40vw;
+    background-image: url(../image/slider-plane-bg.jpg);
+    background-position: 0% 0%;
+    animation: move 4s linear;
+    position: relative;
+}
+@keyframes move {
+    from{
+        background-position:0% 0%;
+    }
+    to{
+        background-position: 0% 100%;
+    }
+}
+.card-inner-02 div img{
+    position:absolute;
+    max-width: 400px;
+    left: -18.5%;
+    top: 20%;
+    transform: translate(-20% , -20%);
+    animation: moveObj 5s linear infinite;
+}
+@keyframes moveObj {
+    0%{
+        transform: translate(-50% , -51%);
+    }
+    50%{
+        transform: translate(-50% , -49%);
+    }
+    100%{
+        transform: translate(-50% , -51%);
+    }
+
+}
+.service span{
+    font-weight: normal;
+}
+
+.card_section{
+    width: 24%;
+}
+.about_section{
+    background: url('https://www.pilogistics.in/assets/images/hp-about-bg.jpg');
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.dummy{
+    height: 100vh;
+}
